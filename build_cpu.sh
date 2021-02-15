@@ -1,10 +1,9 @@
-#!/usr/bin/sh 
+#!/bin/sh 
 
-IMAGE_NAME=pkgpl_cpu
-IMAGE_TAG=0.2
+source ./Env.sh
 
 docker build \
   --rm \
   --file Dockerfile.cpu \
-  --tag $IMAGE_NAME:$IMAGE_TAG \
+  --tag $REPOSITORY:$TAG_CPU \
   ./
