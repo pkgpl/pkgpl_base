@@ -1,0 +1,9 @@
+docker image build \
+  --file Dockerfile.gpu \
+  --tag pkgpl_gpu:latest \
+  ./
+
+docker image build \
+  --file Dockerfile.cpu \
+  --tag pkgpl_cpu:latest \
+  ./
