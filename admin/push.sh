@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./Env.sh
+source ../Env.sh
 
 if [ $DEVICE == "gpu" ]; then
     TAG=$TAG_GPU
