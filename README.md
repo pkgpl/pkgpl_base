@@ -1,7 +1,7 @@
 # pkgpl_base
 Base docker images for research in PKGPL.
 
-## docker pull
+## docker pull from [docker hub](https://hub.docker.com/r/pkgpl/pkgpl_base/tags)
 
 `docker pull pkgpl/pkgpl_base`
 
