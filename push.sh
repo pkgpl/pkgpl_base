@@ -2,10 +2,15 @@
 
 source ./Env.sh
 
+if [ $DEVICE == "gpu" ]; then
+    TAG=$TAG_GPU
+else
+    TAG=$TAG_CPU
+fi
+
 docker logout
 docker login
 
-docker push $REPOSITORY:$TAG_CPU
-docker push $REPOSITORY:$TAG_GPU
+docker push $REPOSITORY:$TAG
 
 docker logout
