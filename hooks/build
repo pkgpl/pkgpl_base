@@ -4,6 +4,7 @@ DOCKERFROM=horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda
 
 docker build \
   --rm \
+  --no-cache \
   --build-arg dockerfrom=$DOCKERFROM \
   --file Dockerfile \
   --tag pkgpl/pkgpl_base:latest \

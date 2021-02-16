@@ -31,5 +31,5 @@ RUN wget https://sourceforge.net/projects/rsf/files/madagascar/madagascar-3.1/ma
 RUN cd $RSFROOT && tar -zxvf madagascar-3.1.1.tar.gz && cd madagascar-3.1.1 && ./configure --prefix=$RSFROOT && make install
 RUN echo "export RSFROOT=$RSFROOT" > /etc/profile.d/rsf.sh
 RUN echo "export PATH=${PATH}:${RSFROOT}/bin" >> /etc/profile.d/rsf.sh
-RUN echo "source ${RSFROOT}/share/madagascar/etc/env.sh" > /etc/profile.d/rsf.sh
+RUN echo "source ${RSFROOT}/share/madagascar/etc/env.sh" >> /etc/profile.d/rsf.sh
 

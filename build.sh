@@ -12,6 +12,7 @@ fi
 
 docker build \
   --rm \
+  --no-cache \
   --build-arg dockerfrom=$DOCKERFROM \
   --file Dockerfile \
   --tag $REPOSITORY:$TAG \
