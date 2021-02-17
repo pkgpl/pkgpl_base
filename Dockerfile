@@ -39,3 +39,5 @@ ENV PROFILE /etc/profile.d/pkgpl.sh
 ENV PYTHONPATH ''
 ENV JULIA_LOAD_PATH ''
 RUN echo "source ${RSFROOT}/share/madagascar/etc/env.sh" >> $PROFILE
+
+ENV TERM xterm-256color
