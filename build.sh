@@ -6,7 +6,7 @@ if [ $# -gt 0 ] && [ $1 == "-h" ]; then
     echo "Run Container: $PROJECT_NAME"
     echo "$0 [argument]"
     echo "  no argument: docker build without cache"
-    echo "  -c:          docker build with cache"
+    echo "  -nc:          docker build without cache"
     exit 0
 fi
 
@@ -19,11 +19,11 @@ else
 fi
 
 if [ $# == 0 ]; then
-    CACHE="--no-cache"
+    CACHE=""
 else
     case $1 in
-        -c)
-            CACHE=""
+        -nc)
+            CACHE="--no-cache"
             ;;
         *)
             echo ""
