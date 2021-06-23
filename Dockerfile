@@ -7,6 +7,7 @@ RUN pip install matplotlib pandas jupyterlab scikit-learn bokeh mkl numba mpi4py
 # environment variables
 ENV CUDA_HOME /usr/local/cuda
 ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64:/usr/local/lib"
+RUN ln -s /usr/local/lib/libmkl_rt.so.1 /usr/local/lib/libmkl_rt.so
 
 # work directory
 ENV WORKDIR /work
