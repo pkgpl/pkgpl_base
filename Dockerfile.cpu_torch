@@ -52,3 +52,8 @@ RUN echo "source ${RSFROOT}/share/madagascar/etc/env.sh" >> $PROFILE
 ENV TERM xterm-256color
 
 RUN apt-get install -y git
+
+# PyTorch
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install tensorboard
+

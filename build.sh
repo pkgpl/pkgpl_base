@@ -38,6 +38,6 @@ docker build \
   --rm \
   $CACHE \
   --build-arg dockerfrom=$DOCKERFROM \
-  --file Dockerfile \
+  --file $DOCKERFILE \
   --tag $REPOSITORY:$TAG \
   ./
